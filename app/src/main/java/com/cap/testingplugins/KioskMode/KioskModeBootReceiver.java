@@ -1,4 +1,4 @@
-package com.cap.testingplugins.kiosk;
+package com.cap.testingplugins.KioskMode;
 
 
 import android.content.BroadcastReceiver;

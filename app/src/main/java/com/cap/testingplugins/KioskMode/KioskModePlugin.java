@@ -42,7 +42,7 @@ public class KioskModePlugin extends Plugin {
 
     PackageName = context.getApplicationContext().getPackageName();
     devicePolicyManager = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
-    adminComponentName = com.cap.testingplugins.kiosk.KioskModeDeviceAdminReceiver.getComponentName(context);
+    adminComponentName = com.cap.testingplugins.KioskMode.KioskModeDeviceAdminReceiver.getComponentName(context);
   }
 
   private boolean isLockTaskPermittedStatus() {

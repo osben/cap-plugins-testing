@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-  namespace "com.cap.testing"
+  namespace "com.cap.testingplugins"
   compileSdkVersion rootProject.ext.compileSdkVersion
   defaultConfig {
-    applicationId "com.cap.testing"
+    applicationId "com.cap.testingplugins"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode 10010001
