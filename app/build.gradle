@@ -31,6 +31,9 @@ repositories {
     dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
   }
 }
+repositories {
+  maven { url 'https://jitpack.io' }
+}
 
 dependencies {
   implementation fileTree(include: ['*.jar'], dir: 'libs')

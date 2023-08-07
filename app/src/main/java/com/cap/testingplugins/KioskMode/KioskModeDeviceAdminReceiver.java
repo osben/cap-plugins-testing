@@ -4,28 +4,23 @@ import android.app.admin.DeviceAdminReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Toast;
+
+import com.cap.testingplugins.MainActivity;
 
 public class KioskModeDeviceAdminReceiver extends DeviceAdminReceiver {
   private static final String TAG = "KioskModeDeviceAdminReceiver";
 
-  public static ComponentName getComponentName(Context context) {
-    return new ComponentName(context, KioskModeDeviceAdminReceiver.class);
-  }
 
-//  @Override
-//  public void onReceive(Context context, Intent intent) {
-//    if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
-//     // Toast.makeText(context, "boot_completed", Toast.LENGTH_SHORT).show();
-//      Intent activityIntent = new Intent(context, MainActivity.class);
-//      activityIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // runtime warning if not set
-//      context.startActivity(activityIntent);
-//
-//    } else {
-//      super.onReceive(context, intent);
-//    }
-//
-//  }
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    super.onReceive(context,intent);
+
+      Intent activityIntent = new Intent(context, MainActivity.class);
+      activityIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // runtime warning if not set
+      context.startActivity(activityIntent);
+  }
 
   @Override
   public void onEnabled(Context context, Intent intent) {
